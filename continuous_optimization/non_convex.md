@@ -20,7 +20,11 @@ Given current solution $x$ with cost $f(x)$, and a candidate neighbor $x'$. Let
 - If $\Delta < 0$: *always accept*
 - If $\Delta \geq 0$: accept with probability $\exp(-\Delta /T)$
 
-```{code-cell}python
+:::
+
+
+
+```{code-cell}
 import numpy as np
 x = 1.7 # same starting point as GD
 best_x, best_f = x, x**2 - 10*np.cos(2*np.pi*x) + 10
@@ -38,6 +42,5 @@ for k in range(200_000):
 print(f"x = {best_x:.4f}, f(x) = {best_f:.4f}")
 # x = -0.0000, f(x) = 0.0000 <-- found the global minimum!
 ```
-:::
 
 
