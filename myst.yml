@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 7c40b7c7-dcd2-4949-8d1a-cbe28ded7b05
+  title: Algorithmic Engineering 
+  # description:
+  # keywords: []
+  authors: Haoyu Tang
+  # github:
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
