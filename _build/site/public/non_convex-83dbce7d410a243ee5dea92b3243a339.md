@@ -1,0 +1,43 @@
+---
+kernelspec:
+  name: python3
+  display_name: 'Python 3'
+---
+# Non-Convex Optimization
+
+## Annealing 
+
+:::{tip}
+Key idea: **Accept a bad move with some probability**
+:::
+
+:::{prf:example}
+**(Metropolis)**
+Given current solution $x$ with cost $f(x)$, and a candidate neighbor $x'$. Let 
+\begin{equation}
+    \Delta = f(x')-f(x)
+\end{equation}
+- If $\Delta < 0$: *always accept*
+- If $\Delta \geq 0$: accept with probability $\exp(-\Delta /T)$
+
+```{code-cell}python
+import numpy as np
+x = 1.7 # same starting point as GD
+best_x, best_f = x, x**2 - 10*np.cos(2*np.pi*x) + 10
+T = 10.0
+for k in range(200_000):
+x_new = x + np.random.randn() * 0.5 # random neighbor
+f_old = x**2 - 10*np.cos(2*np.pi*x) + 10
+f_new = x_new**2 - 10*np.cos(2*np.pi*x_new) + 10
+delta = f_new - f_old
+if delta < 0 or np.random.random() < np.exp(-delta / T): # Metropolis
+x = x_new
+if f_new < best_f:
+best_x, best_f = x_new, f_new
+T *= 0.99997 # geometric cooling
+print(f"x = {best_x:.4f}, f(x) = {best_f:.4f}")
+# x = -0.0000, f(x) = 0.0000 <-- found the global minimum!
+```
+:::
+
+
