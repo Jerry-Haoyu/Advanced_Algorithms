@@ -1,1 +1,1 @@
-{"version":"1","myst":"1.8.0","references":[{"kind":"page","data":"/content/index.json","url":"/"},{"identifier":"annealing","kind":"heading","data":"/content/index.json","url":"/","implicit":true}]}
+{"version":"1","myst":"1.8.0","references":[{"kind":"page","data":"/content/index.json","url":"/"},{"kind":"page","data":"/content/non-convex.json","url":"/non-convex"},{"identifier":"annealing","kind":"heading","data":"/content/non-convex.json","url":"/non-convex","implicit":true}]}
