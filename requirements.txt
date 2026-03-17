@@ -1,2 +1,2 @@
 numpy
-xeus-cpp
+xeus-cling
