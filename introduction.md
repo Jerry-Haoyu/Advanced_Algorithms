@@ -4,7 +4,7 @@ kernelspec:
   display_name: 'Python 3'
 ---
 
-# Algorithmic Engineering 
+# Advanced Alogirthms
 
 ```{code-cell}
 print("Hi)"
